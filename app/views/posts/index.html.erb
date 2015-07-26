@@ -1,0 +1,5 @@
+<% @posts.each do |post| %>
+  <h1><%= post.title %></h1>
+  <p><em>By <%= post.author %> @<%= post.updated_at %></em></p>
+  <p><%= post.content %></p>
+<% end %>
