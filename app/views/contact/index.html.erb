@@ -1,0 +1,21 @@
+<!-- contact page -->
+<h1>Contact</h1>
+<script>
+  var s = Snap(200, 200);
+  var bigCircle = s.circle(100, 100, 50).drag();
+  bigCircle.attr({
+    fill: "#bada55",
+    stroke: "#000",
+    strokeWidth: 5
+  });
+  var smallCircleA = s.circle(70, 100, 40);
+  var smallCircleB = s.circle(140, 100, 40);
+  var discs = s.group(smallCircleA, smallCircleB);
+  discs.attr({
+    fill: "#fff"
+  }).animate({r:50}, 1000);
+  bigCircle.attr({
+    mask: discs
+  });
+
+</script>
